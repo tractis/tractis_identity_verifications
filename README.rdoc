@@ -25,9 +25,14 @@ Integrating Tractis Identity Verifications requires to:
 
 === Example view (views/test/index.html.erb)
 
+Use our helper to add the form to redirect your users to your gateway.
+
   <%= identity_verification_gateway("Identify!", "API-KEY", :action => 'create') %>
 
 === Example controller (controllers/test_controller.rb)
+
+
+
   class TestController < ApplicationController
     include Tractis::IdentityVerifications
     def create
@@ -49,6 +54,18 @@ Integrating Tractis Identity Verifications requires to:
 === Screencast from the demo
 
 You can watch {a technical screencast of this demo}[http://vimeo.com/5508268].
+
+=== Create Certified Profiles in your website
+
+With {Tractis Identity Verifications}[https://www.tractis.com/identity_verifications] you can provide Certified Profiles in your website where Tractis will certify the identity of you user.
+
+In order to create certified profiles [\*you will need to specify that the verification will be public*]:
+
+  <%= identity_verification_gateway("Identify!", "API-KEY", {:action => 'create'}, [\*{:public_verification => true}*]) %>
+
+When you create a public verification you will receive an extra parameter from the gateway called *verification_url*.
+
+This parameter will contain the URL for the Identity Verification Proof. You will be able to link this Proof only within your website to let your users check verified identity.
 
 == Further information
 
