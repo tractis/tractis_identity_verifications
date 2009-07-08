@@ -8,7 +8,7 @@ This verifications can be used to create strong authentication using electronic 
 
 == Installation
 
-  script/plugin install git://github.com/mislav/will_paginate.git
+  script/plugin install git://github.com/tractis/tractis_identity_verifications.git 
 
 == Get your API-Key
 
