@@ -59,11 +59,11 @@ You can watch {a technical screencast of this demo}[http://vimeo.com/5508268].
 
 With {Tractis Identity Verifications}[https://www.tractis.com/identity_verifications] you can provide Certified Profiles in your website where Tractis will certify the identity of you user.
 
-In order to create certified profiles [\*you will need to specify that the verification will be public*]:
+In order to create certified profiles you will need to <b>specify that the verification will be public</b> using <b><code>:public_verification => true</code></b>
 
-  <%= identity_verification_gateway("Identify!", "API-KEY", {:action => 'create'}, [\*{:public_verification => true}*]) %>
+  <%= identity_verification_gateway("Identify!", "API-KEY", {:action => 'create'}, {:public_verification => true}) %>
 
-When you create a public verification you will receive an extra parameter from the gateway called *verification_url*.
+The public verification will send an extra parameter called <b><code>:verification_url</code></b> (<code>params[:verification_url]</code>) to the <code>notification_callback</code>. 
 
 This parameter will contain the URL for the Identity Verification Proof. You will be able to link this Proof only within your website to let your users check verified identity.
 
