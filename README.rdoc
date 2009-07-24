@@ -2,9 +2,19 @@
 
 {Tractis Identity Verifications}[https://www.tractis.com/identity_verifications] provide you with a gateway to get your users real identity proven with their electronic certificates.
 
-This custom gateways will request your users a certain set of attributes from their identity such as: name, birthdate, certificate issuer, etc... Your user will have to use an {accepted certificate}[https://www.tractis.com/accepted_certificates] to proof this attributes. Example Given: one website will be able to get his users' real name using Spain or Belgium eID cards.
+These custom gateways will request your users a certain set of attributes from their identity such as: name, birthdate, certificate issuer, etc... Your user will have to use an {accepted certificate}[https://www.tractis.com/accepted_certificates] to proof this attributes. Example Given: one website will be able to get his users' real name using Spain or Belgium eID cards.
 
-This verifications can be used to create strong authentication using electronic certificates or
+== How could I use identity verifications in my proyects?
+
+Identity verifications can be public or private. Public verifications give, apart from the user data, a URL to the Proof of Identity Verification for you to link from your website.
+
+You can make two kind of integrations depending on the type of identity verification, pulic or private:
+
+=== Strong authentication
+You can use private identity verification gateways as strong authentication gateways in order to provide login with certificates.
+
+=== Certified profiles
+Public identity verification gateways allow you to provide certified user profiles in your website where you can highlight those users with certified identity and link the Proof of Identity Verification.
 
 == Installation
 
